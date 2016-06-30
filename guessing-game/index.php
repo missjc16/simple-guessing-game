@@ -23,7 +23,7 @@
     $number = rand(1,10);
         if( isset($_POST['submit']) ){
             $text = $_POST['text'];
-            if(empty($text)){ ?>
+            if(empty($text) || $text > 10 ) { ?>
                 <div class="container">
                     <h2><?php echo 'Please guess any number between 1 to 10' ?></h2>
                 </div>
