@@ -12,7 +12,7 @@
     </style>
     <div class="container">
         <div class="logo">
-            <h1>Gessing Game</h1>
+            <h1>Guessing Game</h1>
         </div>
         <form action="" method="POST">
             <input type="text" name="text">
@@ -20,12 +20,12 @@
         </form>
     </div>
     <?php
-    $number = rand(1,5);
+    $number = mt_rand(1,10);
         if( isset($_POST['submit']) ){
             $text = trim($_POST['text']);
-            if(empty($text) || $text > 5 ) { ?>
+            if(empty($text) || $text > 10 ) { ?>
                 <div class="container">
-                    <h2><?php echo 'Please guess any number between 1 to 5' ?></h2>
+                    <h2><?php echo 'Please guess any number between 1 to 10' ?></h2>
                 </div>
             <?php }else{
                 if($text == $number){ ?>
